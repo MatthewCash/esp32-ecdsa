@@ -1,6 +1,6 @@
 [package]
 name = "esp32-ecdsa"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 license = "AGPL-3.0-only"
 categories = ["embedded", "cryptography", "no-std"]
@@ -8,7 +8,7 @@ repository = "https://github.com/matthewcash/esp32-ecdsa"
 description = "ECDSA (P-256) signing/verification using esp32 hardware accelerators"
 
 [dependencies]
-esp-hal = { version = "1.0.0-rc.0", default-features = false, features = ["unstable"] }
+esp-hal = { version = "1.0.0", default-features = false, features = ["unstable"] }
 p256 = { version = "0.13.2", default-features = false, features = [ "bits" ] }
 nb = "1.1.0"
 primeorder = "0.13.6"
@@ -19,6 +19,7 @@ default = []
 
 # ONLY EVER ENABLE ONE
 # Note: I have only tested on esp32c6
+
 esp32     = ["esp-hal/esp32"]
 esp32s2   = ["esp-hal/esp32s2"]
 esp32s3   = ["esp-hal/esp32s3"]

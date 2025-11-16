@@ -78,7 +78,7 @@ pub const SIGNATURE_LEN: usize = 64;
 pub struct CryptoContext<'a> {
     pub sha: Sha<'a>,
     pub ecc: Ecc<'a, Blocking>,
-    pub trng: Trng<'a>,
+    pub trng: Trng,
     pub secret_key: SecretKey,
     pub server_public_key: PublicKey,
 }
